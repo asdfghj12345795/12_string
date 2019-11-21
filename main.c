@@ -4,7 +4,21 @@
 
 void main(void)
 {
-	char str[30] = "happy C programming";
+	char str[100];
+	int i;
+	FILE *fp;
 	
-	printf("STRING LENGTH of %s is %d", str, strlen(str));
+	fp =fopen("sample.txt", "r");
+	for(i=0;i<3;i++)
+	{
+		
+		//printf(" input a world : ");
+		//scanf("%s", &str);		
+		fscanf(fp, "%s", str);
+		printf("%s\n",str);
+	}
+	fclose(fp);
+	return 0;
+	
+	
 }
